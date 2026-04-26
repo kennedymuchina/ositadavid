@@ -21,7 +21,7 @@ export function ProductCarousel({ products }: ProductCarouselProps) {
     return (
         <div className="relative w-full">
             {/* Carousel Container */}
-            <div className="relative w-2/3 mx-auto aspect-[3/4] overflow-hidden">
+            <div className="relative w-3/5 mx-auto aspect-[3/4] overflow-hidden">
                 <Image
                     key={currentProduct.id}
                     alt={currentProduct.image.altText}
@@ -75,10 +75,10 @@ export function ProductCarousel({ products }: ProductCarouselProps) {
 
             {/* Product Info */}
             <div className="text-center space-y-4 py-8">
-                <h2 className="font-headline-md text-headline-md text-white uppercase tracking-[0.2em]">
+                <h2 className="font-headline-md text-headline-md text-white uppercase tracking-tight font-extrabold">
                     {currentProduct.title}
                 </h2>
-                <p className="font-body-lg text-body-lg text-neutral-400">
+                <p className="font-body-lg text-body-lg text-white-400">
                     ${currentProduct.price}
                 </p>
                 {/* <div className="pt-4">

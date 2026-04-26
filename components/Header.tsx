@@ -2,8 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { MagnifyingGlassIcon, UserCircleIcon, ShoppingCartIcon } from "@phosphor-icons/react";
-import { FiSearch, FiUser, FiShoppingCart } from "react-icons/fi";
+import { MagnifyingGlassIcon, UserIcon, ShoppingCartIcon } from "@phosphor-icons/react";
 
 export function Header() {
     return (
@@ -28,14 +27,16 @@ export function Header() {
             </div>
 
             {/* Center Logo */}
-            <Image
-                src="/images/ositadavid1.png"
-                alt="Osita David"
-                width={200}
-                height={80}
-                priority
-                className="h-16 w-auto"
-            />
+            <Link href="/">
+                <Image
+                    src="/images/ositadavid1.png"
+                    alt="Osita David"
+                    width={200}
+                    height={80}
+                    priority
+                    className="h-16 w-auto"
+                />
+            </Link>
 
             {/* Right Icons */}
             <div className="absolute right-6 flex items-center gap-2">
@@ -44,16 +45,11 @@ export function Header() {
                 </button>
 
                 <button className="text-white hover:opacity-70 transition-opacity active:scale-95">
-                    <div style={{ background: 'black', padding: '5px', display: 'inline-block' }}>
-                        <svg width="20" height="25" viewBox="0 0 100 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M50 60L15 120H85L50 60Z" fill="white" />
-                            <circle cx="50" cy="30" r="20" fill="white" />
-                        </svg>
-                    </div>
+                    <UserIcon className="w-6 h-6" weight="fill" />
                 </button>
 
                 <button className="text-white hover:opacity-70 transition-opacity active:scale-95 relative">
-                    <FiShoppingCart className="w-6 h-6" />
+                    <ShoppingCartIcon className="w-6 h-6" weight="fill" />
                 </button>
             </div>
         </header>
