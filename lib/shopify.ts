@@ -1,10 +1,6 @@
 const SHOPIFY_STORE_DOMAIN = process.env.NEXT_PUBLIC_SHOPIFY_STORE_DOMAIN;
 const SHOPIFY_STOREFRONT_TOKEN = process.env.NEXT_PUBLIC_SHOPIFY_STOREFRONT_TOKEN;
 
-if (!SHOPIFY_STORE_DOMAIN || !SHOPIFY_STOREFRONT_TOKEN) {
-    throw new Error("Missing Shopify environment variables");
-}
-
 interface ShopifyProduct {
     id: string;
     title: string;
@@ -33,6 +29,11 @@ export interface Product {
 }
 
 async function shopifyFetch(query: string, variables = {}) {
+    if (!SHOPIFY_STORE_DOMAIN || !SHOPIFY_STOREFRONT_TOKEN) {
+        console.warn("Shopify environment variables not configured. Returning empty data.");
+        return { data: { products: { edges: [] } } };
+    }
+
     try {
         const response = await fetch(`https://${SHOPIFY_STORE_DOMAIN}/api/2024-01/graphql.json`, {
             method: "POST",
