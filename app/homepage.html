@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;600;700;800;900&amp;family=Inter:wght@400;600&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-low": "#1c1b1b",
+                        "inverse-primary": "#5d5f5f",
+                        "surface-container-high": "#2a2a2a",
+                        "on-secondary-fixed-variant": "#474747",
+                        "tertiary-fixed-dim": "#c6c6c7",
+                        "on-secondary-fixed": "#1b1b1b",
+                        "surface-container-highest": "#353535",
+                        "primary-container": "#e2e2e2",
+                        "background": "#131313",
+                        "surface-bright": "#393939",
+                        "on-error-container": "#ffdad6",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-primary-container": "#636565",
+                        "on-surface-variant": "#c4c7c8",
+                        "tertiary-fixed": "#e2e2e2",
+                        "inverse-surface": "#e5e2e1",
+                        "surface": "#131313",
+                        "secondary": "#c6c6c6",
+                        "surface-variant": "#353535",
+                        "primary-fixed-dim": "#c6c6c7",
+                        "on-primary": "#2f3131",
+                        "on-surface": "#e5e2e1",
+                        "outline-variant": "#444748",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "on-secondary-container": "#b5b5b5",
+                        "on-background": "#e5e2e1",
+                        "on-tertiary": "#2f3131",
+                        "primary-fixed": "#e2e2e2",
+                        "error-container": "#93000a",
+                        "secondary-fixed": "#e2e2e2",
+                        "on-primary-fixed": "#1a1c1c",
+                        "secondary-container": "#474747",
+                        "on-error": "#690005",
+                        "on-tertiary-container": "#636565",
+                        "on-primary-fixed-variant": "#454747",
+                        "surface-container": "#20201f",
+                        "tertiary": "#ffffff",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "primary": "#ffffff",
+                        "inverse-on-surface": "#313030",
+                        "outline": "#8e9192",
+                        "error": "#ffb4ab",
+                        "secondary-fixed-dim": "#c6c6c6",
+                        "surface-tint": "#c6c6c7",
+                        "surface-dim": "#131313",
+                        "on-secondary": "#303030",
+                        "tertiary-container": "#e2e2e2"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "section-gap": "8rem",
+                        "gutter": "1.5rem",
+                        "element-gap": "2rem",
+                        "margin-edge": "2rem"
+                    },
+                    "fontFamily": {
+                        "display-xl": ["Epilogue"],
+                        "headline-md": ["Epilogue"],
+                        "body-sm": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "label-caps": ["Inter"],
+                        "headline-lg": ["Epilogue"]
+                    },
+                    "fontSize": {
+                        "display-xl": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "800" }],
+                        "headline-md": ["24px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "body-sm": ["14px", { "lineHeight": "1.5", "letterSpacing": "0.01em", "fontWeight": "400" }],
+                        "body-lg": ["16px", { "lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "400" }],
+                        "label-caps": ["12px", { "lineHeight": "1.0", "letterSpacing": "0.2em", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            font-size: 20px;
+        }
+
+        body {
+            background-color: #000000;
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body class="font-body-lg text-on-background selection:bg-white selection:text-black">
+    <!-- TopAppBar -->
+    <header
+        class="flex justify-between items-center px-6 py-4 w-full bg-black/90 backdrop-blur-md fixed top-0 z-50 border-b border-white/10">
+        <div class="flex items-center gap-4">
+            <button class="text-white hover:opacity-70 transition-opacity active:scale-95 transition-transform">
+                <span class="material-symbols-outlined" data-icon="close">close</span>
+            </button>
+        </div>
+        <h1 class="font-epilogue font-black text-xl text-white tracking-tighter uppercase">OSITA DAVID</h1>
+        <div class="flex items-center gap-4">
+            <button class="text-white hover:opacity-70 transition-opacity active:scale-95 transition-transform">
+                <span class="material-symbols-outlined" data-icon="search">search</span>
+            </button>
+            <button class="text-white hover:opacity-70 transition-opacity active:scale-95 transition-transform">
+                <span class="material-symbols-outlined" data-icon="person">person</span>
+            </button>
+            <button
+                class="text-white hover:opacity-70 transition-opacity active:scale-95 transition-transform relative">
+                <span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+            </button>
+        </div>
+    </header>
+    <main class="pt-20">
+        <!-- Sub Navigation -->
+        <nav class="flex justify-center gap-8 py-8">
+            <a class="font-label-caps text-label-caps text-white border-b border-white pb-1" href="#">EXCLUSIVE</a>
+            <a class="font-label-caps text-label-caps text-neutral-500 hover:text-white transition-colors"
+                href="#">TOUR</a>
+            <a class="font-label-caps text-label-caps text-neutral-500 hover:text-white transition-colors"
+                href="#">COLLECTIONS</a>
+        </nav>
+        <!-- Product Spotlight -->
+        <section class="flex flex-col items-center px-margin-edge mt-8">
+            <div class="w-full aspect-[3/4] overflow-hidden bg-surface-container-lowest mb-12">
+                <img alt="YGR Hoodie" class="w-full h-full object-cover grayscale contrast-125"
+                    data-alt="Premium oversized black hoodie with high-density embroidery on a dark studio background with dramatic rim lighting and deep shadows."
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3oOJ8P2KNEmXl_W8HGtcPEz3H4rpk5dCzGvKf67QZdZ0yPPaVTs7A3sEtehIOqIOuXyTU7I9ivo8CkU_n4Y8txi1Fw1FcjwKx-sqcnqGomgM1CHSTGUwmixNf_yxh2-twzHK8IJlXiNmABc3Wy5p6lVOem0n1V3LdDKfqsBqw9CIYQerQVK_iyvqguHmqPQgpRwFDB6VDqUqsGnglsI1MEji-5pdda1_tI-aWN-TkEWHAak3RVIHd-2t4pGffpgxD1xkMKi5UMhp6" />
+            </div>
+            <div class="text-center space-y-4 mb-24">
+                <h2 class="font-headline-md text-headline-md text-white uppercase tracking-[0.2em]">YGR HOODIE</h2>
+                <p class="font-body-lg text-body-lg text-neutral-400">$35</p>
+                <div class="pt-8">
+                    <button
+                        class="px-12 py-4 bg-white text-black font-label-caps text-label-caps hover:bg-neutral-200 transition-colors active:scale-95 transition-transform">
+                        ADD TO CART
+                    </button>
+                </div>
+            </div>
+        </section>
+        <!-- Secondary Focus Area -->
+        <section class="px-margin-edge py-section-gap border-t border-white/5">
+            <div class="flex flex-col gap-gutter">
+                <div class="group relative overflow-hidden bg-surface-container-lowest aspect-square">
+                    <img class="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700 grayscale"
+                        data-alt="Close up of black luxury streetwear fabric texture with white screen printed graphic design in a minimalist brutalist style."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAC3r2C5A9n18EhflZbvAa-XdRXgEfAI1FNU_r96uMjCAA4G4kYRg9kJwVD5hc9QqXknEIV-XGqDkDax64hZseubUVJIBXKfKH4iV-VGa1LM1T9XEAf2nSRWiADbwqg_HMsCPmx1qBbjrecPgpTdkw3FLGhKHMEYzDPfoqgKb7h4Chc1DxDrMPcRfgavw4WRC_Kt9rXPnw9Y1REBWeiz5PLKsAZIrWHSrwi27qUwnsA6yrl9lGSsZepJCviAVizLL_d1o3xFUVKuR83" />
+                    <div class="absolute bottom-6 left-6">
+                        <span
+                            class="bg-white text-black px-3 py-1 text-[10px] font-bold tracking-tighter uppercase mb-2 inline-block">New
+                            Drop</span>
+                        <h3 class="font-headline-md text-headline-md text-white">THE ARCHIVE</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="flex flex-col items-center gap-12 py-20 px-8 w-full mt-auto bg-black border-t border-white/10">
+        <div class="flex gap-8">
+            <a class="text-white hover:opacity-70 transition-opacity" href="#">
+                <span class="material-symbols-outlined" data-icon="share">share</span>
+            </a>
+            <a class="text-white hover:opacity-70 transition-opacity" href="#">
+                <span class="material-symbols-outlined" data-icon="public">public</span>
+            </a>
+            <a class="text-white hover:opacity-70 transition-opacity" href="#">
+                <span class="material-symbols-outlined" data-icon="mail">mail</span>
+            </a>
+        </div>
+        <nav class="flex flex-col items-center gap-4">
+            <a class="font-epilogue text-[10px] tracking-widest uppercase text-neutral-500 hover:text-white transition-colors"
+                href="#">TERMS &amp; CONDITIONS</a>
+            <a class="font-epilogue text-[10px] tracking-widest uppercase text-neutral-500 hover:text-white transition-colors"
+                href="#">PRIVACY POLICY</a>
+            <a class="font-epilogue text-[10px] tracking-widest uppercase text-neutral-500 hover:text-white transition-colors"
+                href="#">COOKIES</a>
+            <a class="font-epilogue text-[10px] tracking-widest uppercase text-neutral-500 hover:text-white transition-colors"
+                href="#">DO NOT SELL MY INFORMATION</a>
+        </nav>
+        <div class="text-center pt-8 border-t border-white/5 w-full max-w-[200px]">
+            <p class="font-epilogue text-[10px] tracking-widest uppercase text-neutral-600">© OSITA DAVID</p>
+        </div>
+    </footer>
+</body>
+
+</html>
