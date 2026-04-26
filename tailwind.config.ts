@@ -10,6 +10,12 @@ const config: Config = {
     extend: {
       fontFamily: {
         sans: ['"Helvetica Neue"', 'Helvetica', 'Arial', 'sans-serif'],
+        "display-xl": ["var(--font-epilogue)"],
+        "headline-md": ["var(--font-epilogue)"],
+        "body-sm": ["var(--font-inter)"],
+        "body-lg": ["var(--font-inter)"],
+        "label-caps": ["var(--font-inter)"],
+        "headline-lg": ["var(--font-epilogue)"],
       },
       colors: {
         "surface-container-low": "#1c1b1b",
@@ -72,14 +78,6 @@ const config: Config = {
         "gutter": "1.5rem",
         "element-gap": "2rem",
         "margin-edge": "2rem",
-      },
-      fontFamily: {
-        "display-xl": ["var(--font-epilogue)"],
-        "headline-md": ["var(--font-epilogue)"],
-        "body-sm": ["var(--font-inter)"],
-        "body-lg": ["var(--font-inter)"],
-        "label-caps": ["var(--font-inter)"],
-        "headline-lg": ["var(--font-epilogue)"],
       },
       fontSize: {
         "display-xl": [
